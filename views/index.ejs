@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        
+    <nav>
+
+        <ul class="nav-links">
+            <li class="nav"><a class="allLinks" href="/writes">Home</a></li>
+            <li class="nav"><a class="allLinks" href="/writes/new">Sell</a></li>
+            <li class="nav"><a class="allLinks" href="/reviews">Reviews</a></li>
+        </ul>
+    </nav>
+</header>
+    <h1>FOOTY LAB</h1>
+<div class="container-fluid">
+    <div class="card-deck">
+        <% kits.forEach(kit => { %>
+        <div class="card">
+
+            <a href="/kits/<%=kit._id; %>"> <img class="card-img-top" src="<%=kit.img %>"></a>
+            <div class="card-body">
+                    <div class="h2 text-center"><%=kit.name; %></div>
+                    <div class="lead text-center text-muted"><em>$<%=kit.price; %></em></div>
+                    <!-- <div class="lead text-center"><%=kit.description; %></div> -->
+            </div>
+        </div>
+          <% }) %>
+    </div>
+</div>
+</body>
+</html>
