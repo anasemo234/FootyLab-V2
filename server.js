@@ -1,37 +1,40 @@
-// === Dependencies === //
+// === Dependencies ===//
 const express = require('express');
-const app = express()
-const { default: mongoose } = require('mongoose');
-const Kit = require('./models/kit')
+const app = express();
+const mongoose = require('mongoose');
+const Write = require('./models/write');
 const methodOverride = require('method-override');
-require('dotenv').config()
+require('dotenv').config();
 
 
-// === Database Configuration === //
 const MONGODB_URI = process.env.MONGODB_URI
+// === Database Connection === //
 mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    // useUnifiedToplogy: true,
+    // useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
 
-// === MIDDLEWARE === //
+// === Middleware === //
 app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride('_method'))
-const kitController = require('./controllers/kits')
-app.use('/kits', kitController)
+app.use(methodOverride("_method"))
+const writesController = require('./controllers/writes');
+const reviewsController = require('./controllers/reviews');
+app.use('/reviews', reviewsController);
+app.use('/writes', writesController);
+app.use('/public', express.static("public"));
 
 
-
-
-
-
-
-// === Database Connection Error/Success === //
+// === Database Connection === //
 const db = mongoose.connection
 db.on('error', (err) => console.log(err.message + ' is mongo not running'));
 db.on('connected', () => console.log('mongo connected'));
-db.on('disconnected', () => console.log('mongo disconnected'));
+db.on('error', () => console.log('mongo disconnected'));
+
+
+// app.get('/', (req, res) => {
+//     res.render('index.ejs');
+// });
 
 
 
@@ -44,6 +47,14 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 
 
-app.listen(3000, () => {
-    console.log('listening......');
-})
+
+
+
+
+
+
+
+
+// === Listener === ///
+const PORT = process.env.PORT;
+app.listen(PORT, () => console.log(`server is listening on port: ${PORT}`));

@@ -1,0 +1,113 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #e5eafa;
+  margin: 0;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    width:  30vw 30vh;
+    height: 30vw 30vh;
+}
+
+
+
+.text-center {
+    text-align: center!important;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.h2 {
+    font-size: 2rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 60px;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 20px;
+    justify-content: space-between;
+    font-size: 25px;
+
+}
+
+.nav-links .nav li a {
+    transition: all 0.3s ease 0s;
+    color: #12232e;
+    text-decoration: none;
+}
+
+.nav-links .nav li a:hover {
+    color: aquamarine;
+}
+
+header {
+    background-color: #e5eafa;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.allLinks {
+    text-decoration: none;
+    color: #12232e;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease 0s;
+}
+
+.allLinks:hover {
+    color: #0088a9;
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 0 33.333%;
+    padding: 10px;
+  }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            background-color:  #e5eafa;
+        }
+          .home {
+        text-align: center;
+        font-size: large;
+        border-bottom: 2px solid black;
+        padding-bottom: 10px;
+        padding-top: 10px;
+}
+
+.allLinks{
+    text-decoration: none;
+    margin: 40px;
+    color: #12232e;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease 0s;
+}
+.allLinks:hover {
+    color: #0088a9;
+}
+    
+fieldset {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .info   {
+            
+            width: 25%;
+            background: #f9f9f9;
+            border-radius: 0 10px 10px 0;
+            padding: 15px;
+            box-sizing: border-box;
+            overflow: auto;
+            margin: auto;
+        }
+        input, textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid rgb(229, 228, 228);
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+        h1 {
+            text-align: center;
+        }
+       h2, h4, p {
+           text-align: center;
+       }
+       .main {
+           background-color: #aeb8c0;
+       }
+
+       h4 {
+           padding: 10px;
+           font-weight: bolder;
+           font-size: large;
+           color: rgb(23, 23, 23);
+       }
+
+       p {
+           font-style: italic;
+           font-weight: 500;
+       }
+    </style>
+</head>
+<body>
+    <nav class="home">
+        <a class="allLinks" href="/writes">Home</a>
+        <a class="allLinks" href="/writes/new">Sell</a>
+    </nav>
+    <h1>Reviews</h1>
+    <div class="container">
+        <div class="info">
+        <form action="/reviews" method="POST">
+            <fieldset class="item-info">
+            <label for="items">Choose a product</label>
+            <select name="items" id="items">
+                <option value="read madrid">Real Madrid</option>
+                <option value="chelsea">Chelsea</option>
+                <option value="inter milan">Inter Milan</option>
+                <option value="barcelona">Barcelona</option>
+                <option value="manchester united">Manchester United</option>
+                <option value="juventus">Juventus</option>
+                <option value="other">Other</option>
+            </select> <br/>
+            Name: <input type="text" name="name" > <br/>
+         
+            Review: <textarea  name="body" id="review" placeholder="Tell us about your item!"></textarea>
+        </fieldset>
+            <input type="submit" value="Submit">
+        </div>
+
+        </form>
+    </main>
+    <main>
+        
+        <h2>All Reviews</h2>
+            <div class="main">
+            <% for(let i = 0; i < reviews.length; i++) { %>
+
+                       <h4><%= reviews[i].name %></h4> <br/>
+                      <p><%= reviews[i].body %></p> 
+                    
+          <% } %>
+        </div>
+        </div>
+</body>
+</html>
