@@ -69,6 +69,13 @@ header {
     color: #12232e;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all 0.3s ease 0s;
+    margin-right: 2em;
+    padding-right: 2em;
+}
+
+
+ #reviews {
+    padding-right: 7em;
 }
 
 .allLinks:hover {
@@ -123,6 +130,9 @@ header {
     padding-top: 10px;
   }
 
+
+
+        /* Footer */
   .footer-content{
     display: flex;
     align-items: center;
@@ -162,7 +172,7 @@ header {
     text-align: center;
     margin-right: 5rem;
     margin-left: 3.2em;
-
+    padding-right: 2.6em;
     
 }
 
@@ -184,8 +194,6 @@ header {
     color: aqua;
 }
 
-
-        /* Footer */
 .footer-bottom{
     background: #000;
     width: 100vw;
@@ -211,3 +219,29 @@ header {
      opacity: .4;
      font-weight: 200;
  }
+
+ .logo-bg {
+    display: inline-block;
+    float: left;
+    background-color: #000;
+    text-align: center;
+    margin-top: -40px;
+    position: relative;
+    padding-right: 3em;
+    padding-left: 3em;
+    margin-top: -10px;
+
+
+ }
+
+ .logo {
+    color: white;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: auto;
+    margin-top: 3px;
+    
+ }
+
+
+ 
