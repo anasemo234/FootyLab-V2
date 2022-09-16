@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
-    <%- include('./partials/head.ejs')  %> 
+
+  <%- include('./partials/head.ejs') %>
 </head>
 
 <body>
-    <header>
-        <%- include('./partials/header.ejs')  %> 
-</header>
+  <header>
+    <%- include('./partials/header.ejs') %>
+  </header>
 
-    <h1>FOOTY LAB</h1>
-    <div class="container">
-    <% writes.forEach(write => { %>
-        <div class="card">
+  <div class="shop-banner">
+    <img src="public/images/project/footybanner.jpg" class="banner" alt="shop">
+  </div>
+  <div class="container">
+    <% writes.forEach(write=> { %>
+      <div class="card">
         <a href="/writes/<%=write._id; %> "> <img src="<%=write.img%> " alt="Denim Jeans" style="width:98%"></a>
-        <h1 class="title"><%=write.name%> </h1>
-        <p class="price">$<%=write.price%> </p>
-        <p class="desc" ><%=write.description%> </p>
+        <h1 class="title">
+          <%=write.name%>
+        </h1>
+        <p class="price">$<%=write.price%>
+        </p>
+        <p class="desc">
+          <%=write.description%>
+        </p>
         <p><button>Add to Cart</button></p>
       </div>
       <% }) %>
-    </div>
-    <br>
+  </div>
+  <br>
 
-    <!-- Footer -->
-    <div>
-      <%- include('./partials/footer.ejs')  %> 
-    </div>
+  <!-- Footer -->
+  <div>
+    <%- include('./partials/footer.ejs') %>
+  </div>
 
 </body>
+
 </html>

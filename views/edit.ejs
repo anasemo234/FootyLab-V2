@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
         fieldset {
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -33,31 +33,33 @@
         }
 
         .home {
-        text-align: center;
-        font-size: large;
-        border-bottom: 2px solid black;
-        padding-bottom: 10px;
-        padding-top: 10px;
-}
+            text-align: center;
+            font-size: large;
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
 
-.edit {
-    color: #eefbfb;
-    text-decoration: none
-}
+        .edit {
+            color: #eefbfb;
+            text-decoration: none
+        }
 
-.allLinks{
-    text-decoration: none;
-    margin: 40px;
-    color: #12232e;
-    font-size: 25px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: all 0.3s ease 0s;
-}
-.allLinks:hover {
-    color: #0088a9;
-}
+        .allLinks {
+            text-decoration: none;
+            margin: 40px;
+            color: #12232e;
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: all 0.3s ease 0s;
+        }
+
+        .allLinks:hover {
+            color: #0088a9;
+        }
     </style>
 </head>
+
 <body>
     <nav class="home">
         <a class="allLinks" href="/writes">Home</a>
@@ -65,17 +67,56 @@
         <a class="allLinks" href="/reviews">Reviews</a>
     </nav>
     <h1>Edit Item</h1>
-    
-    <form action="/writes/<%=write._id%>?_method=PUT" method="POST">
+
+    <!-- <form action="/writes/<%=write._id%>?_method=PUT" method="POST">
         <fieldset class="item-info">
-    Name: <input type="text" name="name" value="<%=write.name%>" placeholder="id">
-    Description: <input type="text" name="description" value="<%=write.description%>" placeholder="id">
-    Image: <input type="text" name="img" value="<%=write.img%>" placeholder="id">
-    Price: <input type="number" name="price" value="<%=write.price%>" placeholder="id">
-    Quantity: <input type="number" name="quantity" value="<%=write.quantity%>" placeholder="id">
+            Name: <input type="text" name="name" value="<%=write.name%>" placeholder="id">
+            Description: <input type="text" name="description" value="<%=write.description%>" placeholder="id">
+            Image: <input type="text" name="img" value="<%=write.img%>" placeholder="id">
+            Price: <input type="number" name="price" value="<%=write.price%>" placeholder="id">
+            Quantity: <input type="number" name="quantity" value="<%=write.quantity%>" placeholder="id">
+            <input type="submit" value="Save Changes">
+        </fieldset>
+    </form> -->
+
+
+    <div class="row">
+        <form class="col s12" action="/writes/<%=write._id%>?_method=PUT" method="POST">
+            <div class="row">
+                <div class="input-field col s6">
+                    <label for="first_name">Name</label>
+                    <input type="text" name="name" value="<%=write.name%>" placeholder="id">
+                </div>
+                <div class="input-field col s6">
+                    <label for="last_name">Description</label>
+                    <input type="text" name="description" value="<%=write.description%>" placeholder="id">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <label for="disabled">Image</label>
+                    <input type="text" name="img" value="<%=write.img%>" placeholder="id">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <label for="password">Price</label>
+                    <input type="number" name="price" value="<%=write.price%>" placeholder="id">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <label for="email">Quantity</label>
+                    <input type="number" name="quantity" value="<%=write.quantity%>" placeholder="id">
+                </div>
+            </div>
+    </div>
     <input type="submit" value="Save Changes">
-</fieldset>
-</form>
+    </div>
+    </form>
+    </div>
+
 
 </body>
+
 </html>

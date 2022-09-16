@@ -104,12 +104,5 @@ module.exports = [
         price: 70,
         qty: 100
     },
-    {
-        name: 'Brazil',
-        description: 'Home Brazil Jersey.',
-        img: 'https://cf.bestsoccerstore.com.cn/upload/ttmall/img/20220823/0963c74c5c0366f9589e826805d9c485.png=z-0,0_f-webp',
-        price: 70,
-        qty: 100
-    },
 
 ]

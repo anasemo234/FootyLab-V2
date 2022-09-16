@@ -414,3 +414,15 @@ p {
 }
 
 
+.shop-banner  {
+    justify-content: center;
+    display: flex;
+   
+}
+
+img.banner {
+    background-size: cover;
+    width: 97%;
+    height: 350px;
+    margin-top: 1em;
+}
