@@ -95,7 +95,7 @@ header {
   }
   
   .price {
-    color: grey;
+    color: black;
     font-size: 22px;
   }
   
@@ -221,7 +221,6 @@ header {
  }
 
  .logo-bg {
-    display: inline-block;
     float: left;
     background-color: #000;
     text-align: center;
@@ -244,4 +243,174 @@ header {
  }
 
 
- 
+ .pic img {
+    width: 800px;
+    height: 800px;
+    position: absolute
+}
+
+
+
+.info {
+    background-color: #12232e;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    position: relative;
+    color: #eefbfb;
+    font-size: 25px;
+    float: right;
+}
+p {
+    color: #eefbfb;
+    
+    
+}
+
+.container {
+    text-align: center;
+}
+
+
+
+ .home {
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.btn {
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+button {
+    /* border: 3px solid black; */
+    border: 2px;
+    
+}
+
+.btn:hover {
+    color: white;
+    background-color: #4CAF50;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.btn:active {
+    background-color: black;
+}
+
+
+.home {
+text-align: center;
+font-size: large;
+border-bottom: 2px solid black;
+padding-bottom: 10px;
+padding-top: 10px;
+}
+
+.edit {
+color: #eefbfb;
+text-decoration: none
+}
+
+.allLinks{
+text-decoration: none;
+margin: 40px;
+color: #12232e;
+font-size: 25px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+transition: all 0.3s ease 0s;
+}
+.allLinks:hover {
+color: #0088a9;
+}
+
+.desc {
+    color: #000;
+}
+
+h1 .show-title {
+    text-align: center;
+}
+
+
+
+
+
+ /* Review */
+ body {
+    background-color:  #e5eafa;
+}
+  .home {
+text-align: center;
+font-size: large;
+border-bottom: 2px solid black;
+padding-bottom: 10px;
+padding-top: 10px;
+}
+
+.allLinks{
+text-decoration: none;
+margin: 40px;
+color: #12232e;
+font-size: 25px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+transition: all 0.3s ease 0s;
+}
+.allLinks:hover {
+color: #0088a9;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.info   {
+    
+    width: 25%;
+    background: #f9f9f9;
+    border-radius: 0 10px 10px 0;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+    margin: auto;
+}
+input, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(229, 228, 228);
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+h1 {
+    text-align: center;
+}
+h2, h4, p {
+   text-align: center;
+}
+.main {
+   background-color: #aeb8c0;
+}
+
+h4 {
+   padding: 10px;
+   font-weight: bolder;
+   font-size: large;
+   color: rgb(23, 23, 23);
+}
+
+p {
+   font-style: italic;
+   font-weight: 500;
+}
+
+
